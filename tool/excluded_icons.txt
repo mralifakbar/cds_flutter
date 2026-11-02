@@ -1,0 +1,22 @@
+# Brand marks removed from the CDS icon font before redistribution.
+# The Apache-2.0 license grants no trademark rights; these glyphs are logos.
+coinbase
+coinbaseCardProduct
+coinbaseOne
+coinbaseOneCard
+coinbaseOneLogo
+coinbaseRewards
+walletLogo
+base
+baseSquare
+appleLogo
+googleLogo
+discordLogo
+twitterLogo
+xLogo
+instagramLogo
+linkedInLogo
+gitHubLogo
+paypal
+paypalLogo
+ideal

@@ -1,0 +1,21 @@
+name: Feature or component request
+description: Ask for a missing CDS component, prop or behavior.
+labels: [enhancement]
+body:
+  - type: input
+    id: cds
+    attributes:
+      label: CDS reference
+      description: Link to the CDS docs page or source, if this exists in CDS.
+      placeholder: https://cds.coinbase.com/components/...
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: Proposed API
+      render: dart

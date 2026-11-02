@@ -1,0 +1,176 @@
+# cds_flutter
+
+> Unofficial Flutter port of the Coinbase Design System (CDS): theme tokens, light, dark and high-contrast themes, 552 icons, and accessible spring-driven components. Not affiliated with Coinbase.
+
+Import `package:cds_flutter/cds_flutter.dart`, wrap the app in `CdsThemeProvider`, read the theme with `context.cds`. Widgets are prefixed `Cds`; props follow CDS names; colors are `CdsColor` tokens; spacing is an 8px token scale.
+
+## Guides
+
+- [Accessibility](doc/guides/accessibility.md): What the components do for you, and what you still own.
+- [For AI coding agents](doc/guides/for-ai-agents.md): This page is the entry point when an agent builds a Flutter app with `cds_flutter`. Install the bundled skill so your agent loads these rules automatically:
+- [Getting started](doc/guides/getting-started.md): Install the package, wrap your app in `CdsThemeProvider`, and build your first screen.
+- [Motion](doc/guides/motion.md): Motion answers touch. Feedback on press, springs that start from where things are, sheets that follow the finger. Nothing loops forever.
+- [Theming](doc/guides/theming.md): | Type | What it is |
+- [Tokens](doc/guides/tokens.md): All values come from CDS's default theme.
+
+## Components
+
+- [CdsAccordion](doc/components/CdsAccordion.md): A vertical list of expandable rows where at most one is open. Reach for it to tuck secondary details (fees, limits, FAQs) under short headers.
+- [CdsAccordionItem](doc/components/CdsAccordionItem.md): One expandable row inside a `CdsAccordion`: a pressable header with title, optional media and an animated caret, over a collapsible panel.
+- [CdsAlert](doc/components/CdsAlert.md): A short, interruptive message that asks the person to confirm or cancel, shown with `showCdsAlert`.
+- [CdsAreaChart](doc/components/CdsAreaChart.md): Filled regions under one or more series, optionally stacked, built on `CdsCartesianChart`.
+- [CdsAvatar](doc/components/CdsAvatar.md): A person's or entity's picture, or the first letter of their name on a colored tile when there is no picture.
+- [CdsAvatarButton](doc/components/CdsAvatarButton.md): A `CdsAvatar` that can be pressed, typically to open a profile or account switcher.
+- [CdsBanner](doc/components/CdsBanner.md): A message about the page or the account (an outage, a pending verification, a promotion), with an icon, text, optional actions and an optional dismiss button.
+- [CdsBarChart](doc/components/CdsBarChart.md): Grouped or stacked bars, vertical or horizontal, built on `CdsCartesianChart`.
+- [CdsBottomNavigation](doc/components/CdsBottomNavigation.md): A phone bottom tab bar in CDS style: icon plus label per destination, the active one drawn with the filled glyph and `fgPrimary`, at least 44px targets and the bottom safe area applied.
+- [CdsBox](doc/components/CdsBox.md): The layout primitive: padding, margin, background, border, radius and elevation, all from theme tokens.
+- [CdsBreadcrumb](doc/components/CdsBreadcrumb.md): A trail of links from the top of a hierarchy to the current page, for tablet and desktop layouts with deep navigation.
+- [CdsButton](doc/components/CdsButton.md): A pill-shaped button with a text label, for the actions people take on a screen.
+- [CdsButtonGroup](doc/components/CdsButtonGroup.md): Lays out related buttons in a row or column with the CDS 8px gap.
+- [CdsCalendar](doc/components/CdsCalendar.md): A month grid for picking one date. Use it inline on a screen, or let `CdsDatePicker` show it in a popover next to a typed date.
+- [CdsCarousel](doc/components/CdsCarousel.md): A horizontally paged row of items with an optional title, previous/next buttons and dot pagination. Use it for browsable sets like featured assets or learning cards.
+- [CdsCartesianChart](doc/components/CdsCartesianChart.md): The shared chart frame: it computes scales from the series, reserves space for axes, handles scrubbing, and paints chart elements given as children.
+- [CdsCell](doc/components/CdsCell.md): The layout primitive behind `CdsListCell` and `CdsContentCell`: media, main content, intermediary, end content and accessory in a row, with optional content below.
+- [CdsCellAccessory](doc/components/CdsCellAccessory.md): The trailing icon of a cell: an arrow, a more menu, or a selection checkmark.
+- [CdsCellDetail](doc/components/CdsCellDetail.md): End-aligned detail and subdetail text of a cell, such as a balance and its change.
+- [CdsCellHelperText](doc/components/CdsCellHelperText.md): An assistive message under a cell, led by an icon so its tone does not rest on color alone.
+- [CdsCellMedia](doc/components/CdsCellMedia.md): Media sized and shaped for the start slot of a list cell: an icon, asset, avatar, image or pictogram.
+- [CdsCheckbox](doc/components/CdsCheckbox.md): A checkbox with an optional label, for turning one option on or off or selecting several items from a list.
+- [CdsCheckboxCell](doc/components/CdsCheckboxCell.md): A full-width bordered row with a checkbox, a title and an optional description; the whole row is the touch target.
+- [CdsCheckboxGroup](doc/components/CdsCheckboxGroup.md): A labelled set of checkboxes bound to a `Set` of selected values.
+- [CdsChip](doc/components/CdsChip.md): A compact, pill-shaped element for filters, quick selections and short status. Pressable only when `onPress` is set.
+- [CdsCoachmark](doc/components/CdsCoachmark.md): A small card that introduces a feature, usually pointed at it by a `CdsTour`, rendered on the inverted color scheme.
+- [CdsCodeSnippet](doc/components/CdsCodeSnippet.md): A block of monospaced literal text, such as a command, wallet address or API key, with a copy button.
+- [CdsCollapsible](doc/components/CdsCollapsible.md): Shows or hides content by animating its size and opacity. Use it for "Show details" toggles and as the building block of `CdsAccordion`.
+- [CdsCombobox](doc/components/CdsCombobox.md): A `CdsSelect` with a search field at the top of its options, for long lists such as countries or assets.
+- [CdsContainedAssetCard](doc/components/CdsContainedAssetCard.md): A compact asset tile: a header (usually a logo) over a subtitle, title and description, with extra content in the large size.
+- [CdsContentCard](doc/components/CdsContentCard.md): A composable card for feed content, built from `CdsContentCardHeader`, `CdsContentCardBody` and `CdsContentCardFooter`.
+- [CdsContentCardBody](doc/components/CdsContentCardBody.md): Main content of a `CdsContentCard`: title, description and optional media, with custom content below.
+- [CdsContentCardFooter](doc/components/CdsContentCardFooter.md): Bottom row of a `CdsContentCard`, spreading its children apart.
+- [CdsContentCardHeader](doc/components/CdsContentCardHeader.md): Top row of a `CdsContentCard`: thumbnail, title and subtitle, and an actions slot.
+- [CdsContentCell](doc/components/CdsContentCell.md): A cell for longer content: a title with meta information beside it, a subtitle, and a description that wraps freely.
+- [CdsContextMenu](doc/components/CdsContextMenu.md): A menu of actions for an item, opened by long-press on touch screens, right-click with a mouse, or the context-menu key.
+- [CdsControlGroup](doc/components/CdsControlGroup.md): A labelled set of radios, checkboxes or switches built from a list of options, with one API for single and multiple selection.
+- [CdsDataCard](doc/components/CdsDataCard.md): A card pairing a title with a data visualization such as a progress bar or circle.
+- [CdsDateInput](doc/components/CdsDateInput.md): A text field for typing a date, masked as `mm/dd/yyyy` by default, with built-in validation. Reach for it when people know the date already, such as a date of birth.
+- [CdsDatePicker](doc/components/CdsDatePicker.md): A typed date field with a calendar button that opens a `CdsCalendar` in a popover anchored to the field. Use it when people may either type a date or browse to it.
+- [CdsDotCount](doc/components/CdsDotCount.md): A numeric badge, such as an unread count, pinned to a widget or shown on its own.
+- [CdsDotStatusColor](doc/components/CdsDotStatusColor.md): A small colored dot that signals status, pinned to a widget or shown inline.
+- [CdsDotSymbol](doc/components/CdsDotSymbol.md): A badge holding an icon, a small image or any widget, pinned to a widget or shown inline.
+- [CdsDrawer](doc/components/CdsDrawer.md): A sheet pinned to any screen edge (start, end, top or bottom) with the same drag physics as `CdsTray` along its axis.
+- [CdsDropdown](doc/components/CdsDropdown.md): A menu of options that opens from a trigger, with arrow-key navigation and typeahead.
+- [CdsEmptyState](doc/components/CdsEmptyState.md): A centered message for a screen or section with nothing to show, or that failed to load: icon or illustration, a title naming the cause, a description, and up to two actions naming the next step.
+- [CdsFallback](doc/components/CdsFallback.md): A skeleton placeholder shown while content loads, sized like the content it stands in for.
+- [CdsFloatingAssetCard](doc/components/CdsFloatingAssetCard.md): An asset card whose media floats in its own bordered tile, with text underneath on the page background.
+- [CdsFocusTrap](doc/components/CdsFocusTrap.md): Keeps keyboard focus inside its child while on screen and hands it back to the previously focused widget when removed.
+- [CdsFullscreenAlert](doc/components/CdsFullscreenAlert.md): A full-screen alert for important outcomes (a failed transfer, a locked account) that the person must read and respond to.
+- [CdsFullscreenModal](doc/components/CdsFullscreenModal.md): A full-screen modal with a header (logo slot, title, close button), a primary content column and an optional secondary column, for flows that need the whole screen.
+- [CdsFullscreenModalLayout](doc/components/CdsFullscreenModalLayout.md): A bare full-screen surface for custom full-screen modal layouts; `showCdsFullscreenModal` adds the motion, scrim and focus trap.
+- [CdsGrid](doc/components/CdsGrid.md): Arranges children in equal-width columns that wrap into rows. Use a fixed column count, or a minimum column width so the grid adapts to the screen.
+- [CdsGridColumn](doc/components/CdsGridColumn.md): Places a child of `CdsGrid` across several columns or at a specific column.
+- [CdsHandleBar](doc/components/CdsHandleBar.md): The grab handle at the top of a tray: shows the sheet can be dragged, and screen reader users can activate it to dismiss.
+- [CdsIcon](doc/components/CdsIcon.md): A glyph from the CDS icon font: 552 icons, each drawn at 12, 16 and 24px with an outline and an active (filled) variant.
+- [CdsIconButton](doc/components/CdsIconButton.md): A circular button with a single icon, for compact actions such as close, back, or favourite.
+- [CdsInputChip](doc/components/CdsInputChip.md): A removable chip for a value the user entered or picked, such as a selected asset in a multi-select. Pressing it removes the value.
+- [CdsInputIcon](doc/components/CdsInputIcon.md): Icons for a text field's `start` and `end` slots: `CdsInputIcon` is decorative, `CdsInputIconButton` is a transparent icon button for actions such as clear or reveal password. Both follow the field's focus color.
+- [CdsInputStack](doc/components/CdsInputStack.md): The frame shared by every CDS text field: label, bordered input area with start and end slots, focus border and helper text. Reach for it to build a custom field (a masked input, a trigger that opens a picker) that must look like `CdsTextInput`.
+- [CdsKbd](doc/components/CdsKbd.md): Keyboard keys drawn as keycaps, for documenting shortcuts.
+- [CdsLegend](doc/components/CdsLegend.md): Lists the labeled series of the surrounding chart with their colors and shapes.
+- [CdsLineChart](doc/components/CdsLineChart.md): A line chart with optional area fill, points, axes and scrubbing, built on `CdsCartesianChart`.
+- [CdsLink](doc/components/CdsLink.md): Pressable text that navigates somewhere, announced to screen readers as a link.
+- [CdsListCell](doc/components/CdsListCell.md): A row in a list: media, a title with optional subtitle and description, end detail, and a trailing accessory.
+- [CdsListCellFallback](doc/components/CdsListCellFallback.md): A loading placeholder shaped like a `CdsListCell`.
+- [CdsMediaCard](doc/components/CdsMediaCard.md): A card split into a text half (with a thumbnail) and a media half.
+- [CdsMediaChip](doc/components/CdsMediaChip.md): A chip that leads with media, such as an asset icon or avatar, with the tighter padding CDS uses around it.
+- [CdsMediaFallback](doc/components/CdsMediaFallback.md): Placeholder for cell media while it loads: a 48px squircle for images, a 32px circle for everything else.
+- [CdsMessagingCard](doc/components/CdsMessagingCard.md): A promotional (`upsell`) or nudge card with a title, description, optional tag, call to action, media and dismiss button.
+- [CdsModal](doc/components/CdsModal.md): A dialog surface for a focused task (header, scrollable body, footer actions), shown above the current route with `showCdsModal`.
+- [CdsModalBody](doc/components/CdsModalBody.md): The scrollable content area of a `CdsModal`, between header and footer.
+- [CdsModalFooter](doc/components/CdsModalFooter.md): The action row at the bottom of a `CdsModal`: one primary action and an optional secondary action.
+- [CdsModalHeader](doc/components/CdsModalHeader.md): The title row of a `CdsModal`, with an optional back button at the start and a close button at the end.
+- [CdsMultiContentModule](doc/components/CdsMultiContentModule.md): A content block with a pictogram, large title, description, a free-form primary area and an action. Use it for feature promos and summaries on a page.
+- [CdsNavBarIconButton](doc/components/CdsNavBarIconButton.md): A 40x40 transparent icon button sized for navigation bars, with a 44px hit area.
+- [CdsNavigationBar](doc/components/CdsNavigationBar.md): A top navigation bar with the title next to the back button, end actions, an optional bottom row, and a hairline underneath. Matches CDS `NavigationBar`, with mobile shortcuts for the common back plus title case.
+- [CdsNavigationSubtitle](doc/components/CdsNavigationSubtitle.md): A muted second line under a [CdsNavigationTitle], also exposed as a header.
+- [CdsNavigationTitle](doc/components/CdsNavigationTitle.md): The title in a navigation bar: headline text marked as a header for screen readers.
+- [CdsNavigationTitleSelect](doc/components/CdsNavigationTitleSelect.md): A navigation title with a caret that opens a picker, for example to switch between portfolios or accounts.
+- [CdsNudgeCard](doc/components/CdsNudgeCard.md): A soft prompt toward a next step, with optional media, a text call to action and a dismiss button.
+- [CdsNumpad](doc/components/CdsNumpad.md): An on-screen keypad for entering amounts (digits, a decimal separator and backspace), used on buy, sell and send screens where the system keyboard would cover the amount.
+- [CdsOtpInput](doc/components/CdsOtpInput.md): A one-time code field drawn as separate cells, for verification codes sent by SMS or email. Not part of CDS; it is built from the same field border, focus and helper text tokens as `CdsTextInput`.
+- [CdsOverlay](doc/components/CdsOverlay.md): The dimmed scrim CDS draws behind modals, alerts, trays and tours.
+- [CdsPageFooter](doc/components/CdsPageFooter.md): The bottom bar of a page that holds its main action, with optional legal text underneath.
+- [CdsPageHeader](doc/components/CdsPageHeader.md): The header at the top of a page's content: a large `title1` title with optional start and end controls.
+- [CdsPageIndicator](doc/components/CdsPageIndicator.md): A row of dots showing which page of a paged view is visible; the active dot stretches into a short bar. `CdsCarousel` uses it as its pagination, and you can pair it with your own `PageView`.
+- [CdsPagination](doc/components/CdsPagination.md): A row of page buttons with previous and next controls, for moving through paged lists and tables.
+- [CdsPercentageBarChart](doc/components/CdsPercentageBarChart.md): A part-to-whole bar: each series is a segment sized by its share of the total. Horizontal by default.
+- [CdsPeriodSelector](doc/components/CdsPeriodSelector.md): Chart period tabs (1H, 1D, 1W...) with a pill that slides to the active tab.
+- [CdsPoint](doc/components/CdsPoint.md): A circle marking one coordinate in data space, with an optional label.
+- [CdsPopoverPanel](doc/components/CdsPopoverPanel.md): A panel anchored to a trigger for content that does not need a full modal, such as filters, account switchers or short forms.
+- [CdsPortal](doc/components/CdsPortal.md): Renders its child in the nearest (or root) `Overlay`, above the rest of the screen, while keeping the theme and directionality of where it is declared.
+- [CdsPressable](doc/components/CdsPressable.md): The interaction primitive behind every tappable CDS component. Use it to make a custom surface behave like CDS buttons and cells.
+- [CdsProgressBar](doc/components/CdsProgressBar.md): A horizontal track that shows how far a task has progressed; value changes animate from the current position.
+- [CdsProgressBarWithFixedLabels](doc/components/CdsProgressBarWithFixedLabels.md): A progress bar with fixed numeric labels at its start and end, placed above, below or beside the track.
+- [CdsProgressBarWithFloatLabel](doc/components/CdsProgressBarWithFloatLabel.md): A progress bar with a numeric label that rides along with the fill, above or below the track.
+- [CdsProgressCircle](doc/components/CdsProgressCircle.md): Circular progress for a known fraction, or a spinning arc while work of unknown length runs.
+- [CdsRadio](doc/components/CdsRadio.md): A single radio button with an optional label. Most screens should use `CdsRadioGroup`, which manages selection and keyboard navigation for a set of radios.
+- [CdsRadioCell](doc/components/CdsRadioCell.md): A full-width bordered row with a radio, a title and an optional description; the whole row is the touch target.
+- [CdsRadioGroup](doc/components/CdsRadioGroup.md): A labelled set of radio buttons with single selection and arrow-key navigation.
+- [CdsRangeSlider](doc/components/CdsRangeSlider.md): Picks a start and an end value from a range with two thumbs on one track. CDS has no range slider; this one shares the look, gestures and keyboard handling of `CdsSlider`.
+- [CdsReferenceLine](doc/components/CdsReferenceLine.md): A horizontal line at a value or a vertical line at a category, for targets, thresholds and events.
+- [CdsRefreshControl](doc/components/CdsRefreshControl.md): Pull to refresh for a vertical scrollable: the indicator follows the finger, and releasing past a threshold reloads the content.
+- [CdsRemoteImage](doc/components/CdsRemoteImage.md): An image from the network or any `ImageProvider`, clipped to a CDS shape, with a loading placeholder and a fallback graphic.
+- [CdsRemoteImageGroup](doc/components/CdsRemoteImageGroup.md): A row of overlapping images that collapses into a `+N` bubble past `max`.
+- [CdsRollingNumber](doc/components/CdsRollingNumber.md): A number whose digits roll from their current value to the new one, for balances, prices and counters that update while people watch.
+- [CdsScaffold](doc/components/CdsScaffold.md): A CDS page frame: an optional header pinned to the top, a scrolling body, and an optional footer pinned to the bottom, with safe areas and the keyboard handled.
+- [CdsScrubber](doc/components/CdsScrubber.md): Highlights the scrubbed position of a chart: a dotted line, an overlay dimming later data, and a beacon on each series. At rest the beacons sit on the latest value.
+- [CdsSearchInput](doc/components/CdsSearchInput.md): A filled, pill-shaped search field with a search icon at the start and a clear button once there is text. Reach for it at the top of a list or screen to filter or search.
+- [CdsSectionHeader](doc/components/CdsSectionHeader.md): A title for a section of a page, with optional leading widget, icon, balance, description and an end slot for a related action.
+- [CdsSegmentedControl](doc/components/CdsSegmentedControl.md): A row of mutually exclusive options with a highlight that slides to the selected one, for switching views or units within a screen ("Buy | Sell", "1D | 1W | 1M").
+- [CdsSegmentedTabs](doc/components/CdsSegmentedTabs.md): Pill-shaped tabs on a tinted track. The active pill slides between options with a spring and the label colors cross-fade. Reach for it for compact, mutually exclusive modes such as Buy / Sell.
+- [CdsSelect](doc/components/CdsSelect.md): A form control for choosing one option (`CdsSelect`) or several (`CdsSelect.multi`) from a list; opens a tray on phones and an anchored menu on wide screens.
+- [CdsSelectChip](doc/components/CdsSelectChip.md): A chip-shaped select for filter bars; it inverts its colors while it holds a value so an applied filter stands out.
+- [CdsSidebar](doc/components/CdsSidebar.md): Vertical app navigation for tablet and desktop layouts, holding `CdsSidebarItem`s and an optional `CdsSidebarMoreMenu`.
+- [CdsSidebarItem](doc/components/CdsSidebarItem.md): A destination in a `CdsSidebar`: an icon and a title, highlighted when it is the current page.
+- [CdsSidebarMoreMenu](doc/components/CdsSidebarMoreMenu.md): A "More" item in a `CdsSidebar` that opens a menu of extra destinations beside the sidebar.
+- [CdsSlideButton](doc/components/CdsSlideButton.md): A slide-to-confirm control: the user drags a handle across the track to commit an action that should not fire on a stray tap, such as sending funds or closing an account.
+- [CdsSlider](doc/components/CdsSlider.md): Picks one value from a continuous or stepped range by dragging a thumb along a track. CDS has no slider; this one is built from CDS tokens to match the selection controls.
+- [CdsSparkline](doc/components/CdsSparkline.md): A small, non-interactive trend line for list rows, cards and tables.
+- [CdsSparklineGradient](doc/components/CdsSparklineGradient.md): A sparkline whose line darkens from left to right in light mode, with an optional dotted area.
+- [CdsSparklineInteractive](doc/components/CdsSparklineInteractive.md): A full-width price chart with period tabs. Drag across it (or long-press and drag) to read values; the header above can follow along.
+- [CdsSparklineInteractiveHeader](doc/components/CdsSparklineInteractiveHeader.md): The asset header above a price chart: a label, a large tabular price and a change line, updated live while scrubbing.
+- [CdsSpinner](doc/components/CdsSpinner.md): An indeterminate loading indicator for waits of unknown length.
+- [CdsHStack / CdsVStack](doc/components/CdsStack.md): Rows and columns with token-based gaps. The workhorse of every CDS layout.
+- [CdsStepper](doc/components/CdsStepper.md): Shows progress through a fixed sequence of steps, such as identity verification or a multi-screen form.
+- [CdsStickyFooter](doc/components/CdsStickyFooter.md): A bar pinned to the bottom of a screen that holds the primary action, such as "Continue" or "Buy Bitcoin".
+- [CdsSwitch](doc/components/CdsSwitch.md): An on/off switch with an optional label, for settings that take effect as soon as they change.
+- [CdsTabIndicator](doc/components/CdsTabIndicator.md): The 2px bar that marks the active tab. It fills its parent's width and springs its bar to a new `x` and `width` from wherever it currently is.
+- [CdsTabLabel](doc/components/CdsTabLabel.md): The text of one tab in a [CdsTabNavigation], with an optional count badge that animates in and out.
+- [CdsTabNavigation](doc/components/CdsTabNavigation.md): The top-level tab bar of a screen: a horizontally scrolling row of [CdsTabLabel]s with a [CdsTabIndicator] under the active one.
+- [CdsTabbedChips](doc/components/CdsTabbedChips.md): A horizontally scrolling row of chips that behaves as a tab list. The active chip inverts its color scheme. Reach for it for nested tabs and filters under a top-level tab bar.
+- [CdsTable](doc/components/CdsTable.md): A data table built from `CdsTableCaption`, `CdsTableHeader`, `CdsTableBody` and `CdsTableFooter`, with rows of `CdsTableCell`s.
+- [CdsTableBody](doc/components/CdsTableBody.md): Body rows of a `CdsTable`.
+- [CdsTableCaption](doc/components/CdsTableCaption.md): The title of a `CdsTable`, shown above the header in `title3`.
+- [CdsTableCell](doc/components/CdsTableCell.md): One cell of a `CdsTableRow`: a title with optional subtitle, or any child, with optional start and end widgets.
+- [CdsTableCellFallback](doc/components/CdsTableCellFallback.md): A loading placeholder for one table cell.
+- [CdsTableCellSortIcon](doc/components/CdsTableCellSortIcon.md): The up and down carets of a sortable column header, with the active direction in `fgPrimary`.
+- [CdsTableFooter](doc/components/CdsTableFooter.md): Footer rows of a `CdsTable`, such as totals. Cells render in muted `body`.
+- [CdsTableHeader](doc/components/CdsTableHeader.md): Header rows of a `CdsTable`. Cells render in muted `headline` and are marked as headers.
+- [CdsTableRow](doc/components/CdsTableRow.md): One row of a `CdsTable` section, optionally pressable.
+- [CdsTabs](doc/components/CdsTabs.md): A row of text tabs with a 2px underline that springs to the active tab. Reach for it to switch between sibling views inside a screen section.
+- [CdsTag](doc/components/CdsTag.md): A short label that categorizes or flags content, such as "New" or "Pending".
+- [CdsText](doc/components/CdsText.md): Text set in the CDS type ramp, colored with semantic tokens.
+- [CdsTextArea](doc/components/CdsTextArea.md): A multiline `CdsTextInput` for longer text such as notes or a support message. It grows from `minLines` to `maxLines`, then scrolls, and can show a character counter.
+- [CdsTextFormField](doc/components/CdsTextFormField.md): A `CdsTextInput` that takes part in a Flutter `Form`: validators, autovalidate, save and reset. Reach for it when a screen collects several fields and checks them together.
+- [CdsTextInput](doc/components/CdsTextInput.md): A labeled text field with a bordered input area, optional `start`/`end` slots, prefix and suffix text, and helper text that reflects validation state. Reach for it for any single-line or short multiline text entry.
+- [CdsTileButton](doc/components/CdsTileButton.md): A square button with media above a short title, for shortcut grids such as Send, Receive and Buy.
+- [CdsTimePicker](doc/components/CdsTimePicker.md): A time field: type `hh:mm`, switch AM/PM, or pick from hour and minute columns in a popover opened by the clock button. CDS has no time picker; this one is built from CDS inputs and tokens.
+- [CdsTimeline](doc/components/CdsTimeline.md): A vertical list of events joined by a line, each with a status dot. Use it for order history, transfer progress and account activity.
+- [CdsToast](doc/components/CdsToast.md): A brief message at the bottom of the screen that confirms an action, optionally with one action button; shown with `showCdsToast`.
+- [CdsTooltip](doc/components/CdsTooltip.md): A short label that explains a control, opened by long-press on touch screens and by hover or keyboard focus with a mouse or keyboard.
+- [CdsTopNavBar](doc/components/CdsTopNavBar.md): The CDS React Native top navigation bar: a start slot (back or close), a centered middle (usually a [CdsNavigationTitle]), an end slot for actions, and an optional bottom row for tabs.
+- [CdsTour](doc/components/CdsTour.md): Steps through feature introductions: each step dims the screen except a spotlight on its target and shows a card (usually a `CdsCoachmark`) with an arrow pointing at it.
+- [CdsTray](doc/components/CdsTray.md): A bottom sheet for short tasks and pickers that follows the finger, snaps or dismisses based on release velocity, and can be grabbed mid-animation.
+- [CdsUpsellCard](doc/components/CdsUpsellCard.md): A promotional card with a title, description, a button, and media anchored to the end edge.
+- [CdsXAxis](doc/components/CdsXAxis.md): The horizontal axis of a cartesian chart: tick labels, grid lines, tick marks, axis line and title.
+- [CdsYAxis](doc/components/CdsYAxis.md): The vertical axis of a cartesian chart: value labels, grid lines, tick marks, axis line and title.

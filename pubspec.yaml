@@ -1,0 +1,61 @@
+name: cds_flutter
+description: >-
+  Unofficial Flutter port of the Coinbase Design System (CDS): tokens, light,
+  dark and high-contrast themes, 552 icons and accessible, spring-driven
+  components. Not affiliated with or endorsed by Coinbase.
+version: 0.1.0
+homepage: https://github.com/mralifakbar/cds_flutter
+repository: https://github.com/mralifakbar/cds_flutter
+issue_tracker: https://github.com/mralifakbar/cds_flutter/issues
+documentation: https://github.com/mralifakbar/cds_flutter/tree/main/doc
+screenshots:
+  - description: Sample wallet home built with cds_flutter, light theme.
+    path: doc/images/sample-wallet-light.png
+  - description: Activity list with status details, dark theme.
+    path: doc/images/sample-activity-dark.png
+  - description: Settings with segmented control, switches, select and radio group.
+    path: doc/images/sample-settings-light.png
+  - description: Interactive line chart with period selector, dark theme.
+    path: doc/images/line-chart-dark.png
+  - description: Button variants in light and dark.
+    path: doc/images/buttons.png
+topics:
+  - design-system
+  - ui
+  - widgets
+  - theme
+  - components
+
+environment:
+  sdk: ^3.9.0
+  flutter: ">=3.35.0"
+
+dependencies:
+  clock: ^1.1.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/licenses/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+    - family: SourceCodePro
+      fonts:
+        - asset: assets/fonts/SourceCodePro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SourceCodePro-Semibold.ttf
+          weight: 600
+    - family: CdsIcons
+      fonts:
+        - asset: assets/fonts/CdsIcons.ttf

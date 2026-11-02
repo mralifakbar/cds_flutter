@@ -1,0 +1,35 @@
+cds_flutter
+Copyright 2026 Alif Akbar Kartadinata and the cds_flutter contributors
+
+This product is an unofficial Flutter port of the Coinbase Design System
+(CDS). It is not affiliated with, sponsored by, or endorsed by Coinbase, Inc.
+"Coinbase" is a trademark of Coinbase, Inc.; this package uses the name only
+to describe what it is a port of. The Apache License does not grant
+permission to use Coinbase trade names, trademarks, or logos.
+
+This product includes software and assets derived from the Coinbase Design
+System (https://github.com/coinbase/cds), Copyright 2026 Coinbase, licensed
+under the Apache License, Version 2.0:
+
+  * Color spectrum and semantic color values, spacing, radius, border, icon,
+    avatar, control-size and typography scales, motion curves and durations,
+    and component dimensions (ported from packages/common and packages/mobile).
+  * The CDS icon font (packages/icons/src/fonts/native/CoinbaseIcons.ttf),
+    redistributed as assets/fonts/CdsIcons.ttf, and its glyph and description
+    maps, converted to Dart by tool/generate_icons.dart.
+  * Interaction color blending (getBlendedColor) and component behavior,
+    re-implemented in Dart.
+
+Changes from the original: all code was rewritten in Dart for Flutter; the
+icon font file was renamed, its layout tables were dropped, and the brand
+marks listed in tool/excluded_icons.txt (Coinbase, Base, Coinbase Wallet and
+third-party logos) were removed from it by tool/subset_icon_font.py; logo,
+wordmark and sub-brand components and the proprietary Coinbase Sans, Display,
+Text and Mono fonts were not included.
+
+This product bundles the following fonts under the SIL Open Font License 1.1:
+
+  * Inter, Copyright (c) 2016 The Inter Project Authors
+    (assets/licenses/Inter-OFL.txt)
+  * Source Code Pro, Copyright 2023 Adobe, with Reserved Font Name 'Source'
+    (assets/licenses/SourceCodePro-OFL.txt)
