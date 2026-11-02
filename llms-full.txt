@@ -295,7 +295,7 @@ Install the package, wrap your app in `CdsThemeProvider`, and build your first s
 flutter pub add cds_flutter
 ```
 
-Requires Flutter 3.35 or newer. The package bundles Inter, Source Code Pro and the CDS icon font; nothing else to configure.
+Requires Flutter 3.38 or newer. The package bundles Inter, Source Code Pro and the CDS icon font; nothing else to configure.
 
 ## Wrap your app
 

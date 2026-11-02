@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         # Minimum supported version and the latest stable release.
-        flutter: ['3.35.x', 'any']
+        flutter: ['3.38.x', 'any']
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -27,13 +27,14 @@ jobs:
           cache: true
       - run: flutter --version
       - run: flutter pub get
+      # Before any step that could touch tracked files.
+      - run: flutter pub publish --dry-run
       # Deprecations introduced after the minimum version show as infos on newer
       # releases; they are reported but do not fail the build.
       - run: flutter analyze --no-fatal-infos
       - run: flutter test --exclude-tags golden
       - run: cd example && flutter pub get && flutter analyze --no-fatal-infos && flutter test
       - run: python3 tool/check_doc_snippets.py
-      - run: flutter pub publish --dry-run
 
   goldens:
     name: Golden images (macOS, Flutter 3.38.5)

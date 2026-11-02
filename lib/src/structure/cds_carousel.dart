@@ -209,7 +209,7 @@ class _CdsCarouselState extends State<CdsCarousel> with SingleTickerProviderStat
   }
 
   bool get _autoplayAllowed =>
-      // TickerMode.of is the API on the minimum supported Flutter (3.35); its
+      // TickerMode.of is the API on the minimum supported Flutter (3.38); its
       // replacement, TickerMode.valuesOf, only exists on newer releases.
       // ignore: deprecated_member_use
       widget.autoplay && !CdsMotion.reduceMotion(context) && TickerMode.of(context);

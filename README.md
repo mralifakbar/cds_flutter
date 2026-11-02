@@ -3,7 +3,7 @@
 [![pub package](https://img.shields.io/pub/v/cds_flutter.svg)](https://pub.dev/packages/cds_flutter)
 [![CI](https://github.com/mralifakbar/cds_flutter/actions/workflows/ci.yml/badge.svg)](https://github.com/mralifakbar/cds_flutter/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![Flutter](https://img.shields.io/badge/Flutter-%3E%3D3.35-02569B.svg?logo=flutter)](https://flutter.dev)
+[![Flutter](https://img.shields.io/badge/Flutter-%3E%3D3.38-02569B.svg?logo=flutter)](https://flutter.dev)
 
 An unofficial Flutter port of the [Coinbase Design System](https://cds.coinbase.com) (CDS). It includes CDS tokens, light, dark and high-contrast themes, 552 icons and more than 150 components, all built for touch.
 
@@ -31,7 +31,7 @@ CDS ships for React and React Native. This package brings the same tokens, compo
 flutter pub add cds_flutter
 ```
 
-Requires Flutter 3.35 or newer. Inter, Source Code Pro and the CDS icon font are bundled, so there is nothing else to set up.
+Requires Flutter 3.38 or newer. Inter, Source Code Pro and the CDS icon font are bundled, so there is nothing else to set up.
 
 ## Quick start
 
