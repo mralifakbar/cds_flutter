@@ -1,3 +1,8 @@
+## 0.1.1
+
+- Shorter package description so pub.dev and search engines show it in full.
+- The minimum supported Flutter version is 3.38.
+
 ## 0.1.0
 
 First public release.
