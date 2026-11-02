@@ -25,6 +25,6 @@ jobs:
         with:
           channel: stable
       - run: flutter pub get
-      - run: flutter analyze
+      - run: flutter analyze --no-fatal-infos
       - run: flutter test --exclude-tags golden
       - run: flutter pub publish --force

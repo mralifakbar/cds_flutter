@@ -5,28 +5,47 @@ on:
     branches: [main]
   pull_request:
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   analyze-and-test:
+    name: Analyze and test (Flutter ${{ matrix.flutter == 'any' && 'stable' || matrix.flutter }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Minimum supported version and the latest stable release.
+        flutter: ['3.35.x', 'any']
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
+          flutter-version: ${{ matrix.flutter }}
           channel: stable
+          cache: true
+      - run: flutter --version
       - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test --exclude-tags golden --coverage
-      - run: cd example && flutter pub get && flutter analyze && flutter test
+      # Deprecations introduced after the minimum version show as infos on newer
+      # releases; they are reported but do not fail the build.
+      - run: flutter analyze --no-fatal-infos
+      - run: flutter test --exclude-tags golden
+      - run: cd example && flutter pub get && flutter analyze --no-fatal-infos && flutter test
       - run: python3 tool/check_doc_snippets.py
-      - run: dart pub publish --dry-run
+      - run: flutter pub publish --dry-run
 
   goldens:
-    # Golden images are recorded on macOS; font rasterisation differs on Linux.
+    name: Golden images (macOS, Flutter 3.38.5)
+    # Goldens are recorded on macOS with a pinned engine; pixels shift between
+    # operating systems and Flutter releases.
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
+          flutter-version: '3.38.5'
           channel: stable
+          cache: true
       - run: flutter pub get
       - run: flutter test --tags golden
