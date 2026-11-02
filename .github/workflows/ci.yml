@@ -28,6 +28,7 @@ jobs:
       - run: flutter --version
       - run: flutter pub get
       # Before any step that could touch tracked files.
+      - run: git status --porcelain && git diff
       - run: flutter pub publish --dry-run
       # Deprecations introduced after the minimum version show as infos on newer
       # releases; they are reported but do not fail the build.
