@@ -27,8 +27,10 @@ jobs:
           cache: true
       - run: flutter --version
       - run: flutter pub get
-      # Before any step that could touch tracked files.
+      # pub.dev validates packages with the latest stable SDK, so the dry-run
+      # runs there, before any step that could touch tracked files.
       - run: flutter pub publish --dry-run
+        if: matrix.flutter == 'any'
       # Deprecations introduced after the minimum version show as infos on newer
       # releases; they are reported but do not fail the build.
       - run: flutter analyze --no-fatal-infos
