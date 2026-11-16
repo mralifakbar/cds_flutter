@@ -34,6 +34,10 @@ jobs:
       # Deprecations introduced after the minimum version show as infos on newer
       # releases; they are reported but do not fail the build.
       - run: flutter analyze --no-fatal-infos
+      # pub.dev scores lib/ with the latest stable SDK and takes points for any
+      # info, deprecations included, so lib/ must be clean there.
+      - run: flutter analyze --fatal-infos lib
+        if: matrix.flutter == 'any'
       - run: flutter test --exclude-tags golden
       - run: cd example && flutter pub get && flutter analyze --no-fatal-infos && flutter test
       - run: python3 tool/check_doc_snippets.py

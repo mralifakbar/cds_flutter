@@ -1,4 +1,8 @@
 import 'package:flutter/cupertino.dart' show DefaultCupertinoLocalizations;
+// Flutter 3.47 moved Material into the `material_ui` package and deprecated
+// this import. This package still supports Flutter 3.38, where `material_ui`
+// does not exist; switch the import when the minimum Flutter version moves.
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 
 /// Gives a Material [TextField] what it needs without forcing the app to use

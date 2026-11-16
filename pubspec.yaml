@@ -1,7 +1,7 @@
 name: cds_flutter
 description: >-
   Unofficial Flutter port of the Coinbase Design System (CDS): tokens, light, dark and high-contrast themes, 552 icons and 150+ accessible, spring-driven components.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/mralifakbar/cds_flutter
 repository: https://github.com/mralifakbar/cds_flutter
 issue_tracker: https://github.com/mralifakbar/cds_flutter/issues
