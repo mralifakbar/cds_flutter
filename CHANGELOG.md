@@ -1,6 +1,6 @@
 ## 0.1.2
 
-- Static analysis on the latest Flutter: the Material import no longer reports the move to `material_ui` (Flutter 3.47). Behavior is unchanged, and Flutter 3.38 is still supported.
+- Static analysis on the latest Flutter: the Material and Cupertino imports no longer report the move to `material_ui` and `cupertino_ui` (Flutter 3.47). Behavior is unchanged, and Flutter 3.38 is still supported.
 - CI analyzes `lib/` with the latest stable Flutter and fails on any info, the way pub.dev scores the package.
 
 ## 0.1.1
